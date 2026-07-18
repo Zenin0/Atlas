@@ -53,4 +53,4 @@ atlas/
 
 ## 📄 License
 
-TBD.
+AGPL-3.0 license (see [LICENCE](./LICENSE))
