@@ -1,56 +1,56 @@
 # 🤖 Atlas
 
-Robot hexápodo impreso en 3D, diseñado y construido desde cero: mecánica, electrónica y firmware.
+A 3D-printed hexapod robot, designed and built from scratch: mechanics, electronics, and firmware.
 
-## 📋 Descripción
+## 📋 Description
 
-Atlas es un robot hexápodo (6 patas) con 3 grados de libertad por pata (coxa, fémur, tibia — 18 servos en total), controlado mediante un ESP32. El proyecto nace como ejercicio de ingeniería completa: diseño mecánico impreso en 3D, cinemática inversa, control de servomotores y desarrollo de gaits (patrones de marcha).
+Atlas is a hexapod robot (6 legs) with 3 degrees of freedom per leg (coxa, femur, tibia — 18 servos total), controlled by an ESP32. The project is a full-stack engineering exercise: 3D-printed mechanical design, inverse kinematics, servo control, and gait pattern development.
 
-El desarrollo sigue un enfoque iterativo: primero se valida una única pata (mecánica + cinemática inversa) antes de escalar al robot completo.
+Development follows an iterative approach: a single leg (mechanics + inverse kinematics) is validated first, before scaling up to the full robot.
 
 ## 🛠️ Hardware
 
-### Impresión 3D
-| Fase | Material | Motivo |
-|------|----------|--------|
-| Prototipado | PLA | Rápido, barato, fácil de imprimir para iterar geometría |
-| Versión final | ASA | Resistencia mecánica, térmica y a UV muy superior |
+### 3D Printing
+| Stage | Material | Reason |
+|-------|----------|--------|
+| Prototyping | PLA | Fast, cheap, easy to print for iterating on geometry |
+| Final build | ASA | Much higher mechanical, thermal, and UV resistance |
 
-### Electrónica
-- **Microcontrolador:** ESP32
-- **Driver de servos:** PCA9685 (control PWM vía I2C)
-- **Servos (prototipo):** SG90 9G Micro Servo
-- **Servos (versión final):** MG996R
-- **Alimentación:** fuente independiente para los servos (separada del ESP32, tierra común) — necesaria para evitar brownouts por picos de consumo
+### Electronics
+- **Microcontroller:** ESP32
+- **Servo driver:** PCA9685 (PWM control via I2C)
+- **Servos (prototype):** SG90 9G Micro Servo
+- **Servos (final build):** MG996R
+- **Power supply:** dedicated power source for the servos (separate from the ESP32, common ground) — needed to avoid brownouts from current spikes
 
-### Configuración mecánica
-- 6 patas × 3 servos (coxa / fémur / tibia) = 18 DOF totales
+### Mechanical configuration
+- 6 legs × 3 servos (coxa / femur / tibia) = 18 total DOF
 
 ## 🗺️ Roadmap
 
-- [ ] Cinemática inversa de una sola pata (3 DOF)
-- [ ] Prototipo mecánico de una pata en PLA + SG90
-- [ ] Validación de rango de movimiento y control vía PCA9685
-- [ ] Diseño e impresión de las 6 patas
-- [ ] Ensamblaje del chasis completo
-- [ ] Implementación de gait (marcha trípode / wave)
-- [ ] Migración a MG996R y reimpresión en ASA
-- [ ] Ajuste fino de estabilidad y consumo energético
+- [ ] Inverse kinematics for a single leg (3 DOF)
+- [ ] Mechanical prototype of one leg in PLA + SG90
+- [ ] Range of motion validation and control via PCA9685
+- [ ] Design and print all 6 legs
+- [ ] Full chassis assembly
+- [ ] Gait implementation (tripod / wave)
+- [ ] Migration to MG996R and reprint in ASA
+- [ ] Fine-tuning stability and power consumption
 
-## 📁 Estructura del proyecto
+## 📁 Project structure
 
 ```
 atlas/
-├── firmware/          # Código para el ESP32
-├── cad/                # Modelos 3D (piezas imprimibles)
-├── docs/               # Documentación, esquemas eléctricos, notas de diseño
+├── firmware/          # ESP32 code
+├── cad/                # 3D models (printable parts)
+├── docs/               # Documentation, wiring diagrams, design notes
 └── README.md
 ```
 
-## 🚀 Estado actual
+## 🚀 Current status
 
-🔨 En desarrollo — fase actual: cinemática inversa y validación de una pata individual.
+🔨 In development — current phase: inverse kinematics and single-leg validation.
 
-## 📄 Licencia
+## 📄 License
 
-Por definir.
+TBD.
